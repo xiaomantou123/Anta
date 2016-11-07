@@ -1,0 +1,225 @@
+/* 
+* @Author: Marte
+* @Date:   2016-10-29 10:51:52
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-05 20:57:43
+*/
+
+#menubg{  
+    position:relative;
+}
+#topbg{
+    position:relative; 
+    overflow:hidden; 
+}
+
+#menu .search{
+    background:url(../image/Runshorts_img/search.jpg) no-repeat center; 
+    border:0;
+}
+
+#banner ul{
+    position:absolute; 
+    top:0; 
+    left:0;
+    overflow:hidden;
+    width:100%;}
+#banner ul li{
+    height:396px; 
+    width:100%;
+}
+
+#mainbg{
+    width:100%;
+    height: auto; 
+    background: #F2F2F2;  
+    overflow: hidden;
+    position:relative;
+    top:0px;
+}
+.mainLeft{ 
+    float: left; 
+    width: 220px; 
+    margin-left: 20px; 
+    border: 1px solid #CCCCCC; 
+    overflow:hidden;
+    margin-top:40px ;
+    background:#EEEDF1;
+}
+.mainLeft .Mul{border: 1px solid #DDDDDD;}
+.mainLeft ul li{ 
+    font-size: 13px; 
+    line-height: 25px; 
+    height:25px; margin-left: 
+    20px;
+    cursor:pointer;
+}
+.mainLeft .Mul p{ 
+    margin: 10px 10px 5px 20px; 
+    font-size: 18px;
+}
+.mainLeft ul{ 
+    padding: 10px 0;  
+}
+.mainLeft span{
+    float:right; 
+    font-size: 20px; 
+    margin-right: 10px;
+    cursor:pointer;
+}
+.mainLeft ul li a:hover{
+    color:#D00C1A;
+}
+.mainRight{ 
+    float:right;
+    width:1000px;
+}
+#chose{ 
+    background:#FFF; 
+    float:right;
+    border: 1px solid #DDDDDD;
+    background:#F4F4F4;
+    width:225px;
+    height:45px;
+    text-align: left;
+    line-height: 45px;
+    color:#666666;
+    margin-right: 40px;
+}
+.mainRight #right{ 
+    width:1000px;
+    float: right;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+#chose span{ 
+    float:right;
+    padding-right: 10px;
+}
+#chose ul{
+    height:45px; 
+    overflow: hidden;
+}
+#chose ul li{ width:210px; 
+    height:45px; 
+    border:1px solid #DDDDDD; 
+    padding-left:15px;
+    
+}
+#chose em{font-style:normal; 
+    color:#000000;
+}
+#chose ul .choseDown{
+    margin-top:20px;
+}
+#chose li:hover a{color:red;}
+.mainRight h3{ 
+    width:650px; 
+    height:50px; 
+    font-size: 20px;
+    float:left;
+}
+
+/*图片的加载区*/
+#mainAjax{
+    height:3960px;
+}
+#mainright #mainAjax ul{ 
+    width:854px;
+    float:left;
+    border: 1px solid blue;
+    height:auto;
+    position:relative;
+    border: 1px solid red;
+}
+/*鼠标滑过时180度旋转*/
+#mainAjax li img:hover{
+    transform:rotate(180deg);
+    box-shadow: 2px 2px 5px #b6b6b6;
+}
+/*鼠标滑过时旋转的速度*/
+#mainAjax li img{
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 1s ease-in-out;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+#mainAjax li{ 
+    width:202px; 
+    margin-right:15px; 
+    height:260px; 
+    float: left; 
+    margin-bottom: 35px;
+    background:#fff;
+    z-index: 1;
+
+}
+#mainAjax .smallPic{ 
+    width:192px;
+    height:0px;
+    overflow:hidden;
+    padding-left: 10px;  
+}
+
+#mainAjax .smallPic span img{
+    width:30px; 
+    height:30px;
+    float:left;
+    border: 1px solid #E4E4E4;
+    margin: 1px;
+}
+
+#mainAjax h5{
+    font-size: 16px;
+    color:#CB1426;
+    font-weight: 700;
+    width:192px;
+    text-align: left;
+    overflow:hidden;
+    margin:15px 0 0 12px;
+}
+#mainAjax h5 span{
+    font-size: 10px;
+    color:#9E9C8F;
+    text-decoration: line-through;
+    font-weight: 400;
+    padding-left:10px;
+}
+#mainAjax h4{
+    width:192px; 
+    overflow:hidden;
+    padding:15px 0 0 10px; 
+}
+#mainAjax h4 a{ 
+    color:black;
+    font-size: 12px;
+    float:left;
+}
+
+/*返回顶部；*/
+#fixedBox{ 
+    font-size: 40px; 
+    position:fixed; 
+    bottom:20px; 
+    right:30px; 
+    background:#7A7A7A;
+    color:#fff;
+    text-align: center; 
+    width:50px;
+    cursor:pointer;
+    display:none;
+}
+
+#chose select{
+    border:0;
+    background:#F4F4F4;
+    position:absolute;
+
+
+}
+#chose select option{
+    border: 0;
+    width:210px; 
+    height:45px; 
+    background:#fff;
+}
