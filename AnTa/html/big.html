@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <title>安踏详情页</title>
         <link rel="stylesheet" type="text/css" href="../css/big.css" />
-        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <script src="../js/jquery-1.10.1.min.js"></script>
+        <script src="../js/jquery.cookie.js"></script>
         <script type="text/javascript" src = "../js/big.js"></script>
     </head>
     <body>
@@ -12,7 +13,7 @@
         <div id = "top">
             <img src="../image/big_img/dt.jpg" />
             <div class = "topLeft">
-                <h3>登录<span>|</span>注册</h3>
+                <a href="login.html"><h3>登录<span>|</span>注册</h3></a>
             </div>
             <div class = "topRight">
                 <ul>
@@ -20,7 +21,7 @@
                     <li><a href="#">品牌官网</a></li>
                     <li class = "ph"><a href="#">手机商城</a></li>
                     <li><a href="#" class = "rd">企业团购</a></li>
-                    <li class = "car"><a href="#" class = "last">购物车(0)件</a></li>
+                    <li class = "car"><a href="shopCar.html" class = "last" target="_blank">购物车</a></li>
                 </ul>
             </div>
         </div>
@@ -47,14 +48,14 @@
                             </div> 
                         </div>
                     </li>
-                    <li><a href="#">篮球</a></li>
-                    <li><a href="#">足球</a></li>
-                    <li><a href="#">综训</a></li>
-                    <li><a href="#">户外</a></li>
-                    <li><a href="#">休闲</a></li>
-                    <li><a href="#">配件</a></li>
-                    <li><a href="#">儿童</a></li>
-                    <li><a href="#">新品</a></li>
+                    <li><a href="runShoes.html">篮球</a></li>
+                    <li><a href="runShoes.html">足球</a></li>
+                    <li><a href="runShoes.html">综训</a></li>
+                    <li><a href="runShoes.html">户外</a></li>
+                    <li><a href="runShoes.html">休闲</a></li>
+                    <li><a href="runShoes.html">配件</a></li>
+                    <li><a href="runShoes.html">儿童</a></li>
+                    <li><a href="runShoes.html">新品</a></li>
                 </ul>
             </div>
             <div class = "Mright">
@@ -130,9 +131,9 @@
                 </div>
                 <h2>颜色：</h2>
                 <div class = "color">
-                    <img src="../image/big_img/small3.jpg" />
-                    <img src="../image/big_img/small1.jpg" />
-                    <img src="../image/big_img/small2.jpg" />
+                    <img src="../image/big_img/small3.jpg" id = "3" class = "img_red" />
+                    <img src="../image/big_img/small1.jpg" id = "1" />
+                    <img src="../image/big_img/small2.jpg" id = "2" />
                 </div>
                 <h2 id = "input_h2">尺码：<input type="text" /> <span>库存：<input type="text" /></span> <em>查看尺码对照表</em></h2>
                 <div class = "size">
@@ -295,7 +296,7 @@
                         <img src="../image/big_img/right1.jpg"/>
                     </li>
                     <li>
-                        <img src="../image/big_img/right2.jpg"/>
+                        <a href="shopCar.html"><img src="../image/big_img/right2.jpg"/></a>
                     </li>
                     <li>
                         <img src="../image/big_img/right3.jpg"/>
@@ -335,9 +336,10 @@
                     <label for="allChose">全选</label>
                     <span>查看更多</span>
                 </h4>
+                <ul></ul>
                 <div id = "goodBox">
-                    <p>已选<span id = "Number">0</span>件商品<span id = "money"></span></p>
-                    <input type="button" value="去购物车结算" id = "buyBtn" />
+                    <p>已选<span id = "Number"></span>件商品<span id = "money"></span></p>
+                    <a href="shopCar.html"><input type="button" value="去购物车结算" id = "buyBtn" /></a>
                 </div>  
             </div>            
         </div>

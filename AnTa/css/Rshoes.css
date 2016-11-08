@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-10-29 10:51:52
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-05 20:57:43
+* @Last Modified time: 2016-11-08 11:54:32
 */
 
 #menubg{  
@@ -176,7 +176,7 @@
     width:192px;
     text-align: left;
     overflow:hidden;
-    margin:15px 0 0 12px;
+    margin:10px 0 0 12px;
 }
 #mainAjax h5 span{
     font-size: 10px;
@@ -188,14 +188,27 @@
 #mainAjax h4{
     width:192px; 
     overflow:hidden;
-    padding:15px 0 0 10px; 
+    padding:10px 0 0 10px; 
 }
 #mainAjax h4 a{ 
     color:black;
     font-size: 12px;
     float:left;
 }
-
+#mainAjax .buy{
+    height:0px;
+    background:red;
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    margin: 0 auto;
+    line-height: 30px;
+    overflow:hidden;
+    cursor:pointer;
+    margin-top:3px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
 /*返回顶部；*/
 #fixedBox{ 
     font-size: 40px; 
@@ -214,12 +227,23 @@
     border:0;
     background:#F4F4F4;
     position:absolute;
-
-
 }
 #chose select option{
     border: 0;
     width:210px; 
     height:45px; 
     background:#fff;
+}
+#ShCar{
+    width:100px;
+    height: 30px;
+    background:red;
+    position: fixed;
+    bottom: 200px;
+    right:30px;
+    text-align: center;
+    line-height: 30px;
+}
+#ShCar a{
+    color: #fff;
 }

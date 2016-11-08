@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-01 17:51:53
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-05 11:58:19
+* @Last Modified time: 2016-11-08 17:06:10
 */
 
 $(document).ready(function(){
@@ -161,10 +161,10 @@ $(document).ready(function(){
     }); 
     //点击右边小图切换放大镜的图片；
     Rimg.click(function(){
+        Rimg.attr("class", "");
+        $(this).attr("class", "img_red");
         var n = $(this).index();
         //左边小图点击时大图切换；
-        Rimg.css("border", "1px solid #B8B7BD");
-        $(this).css("border", "3px solid #BE0106");
         s_pic.click(function(){
             var m = $(this).index() ;
             xx_pic[0].src = '../image/big_img/big' + (m + n * 5) + '.jpg';
@@ -216,8 +216,69 @@ $(document).ready(function(){
     //点击加入购物车，购物车显示；
     var addCar = $("#buy").find(".car");
     addCar.click(function(){
+        sc_msg();
         startMove(allRight, {right:0});
-    })
+        /*
+        $.ajax({
+            url:'../json/runShoe.json',
+            type:'GET',
+            success:function(data){
+                var str = $.cookie('goods');
+                if(str){
+                    var arr = eval(str);
+                    var html = '';
+                    var html2 =Number();
+                    var sc_num = 0;
+                    for(var i in arr){
+                        html += '<li><div><input type="checkbox" checked = "checked" /></div><div class = "sc_pic"><img src="'+data[arr[i].id].bgUr+'" /></div><div class = "sc_title">'+data[arr[i].id].title+'</div><div class = "sc_num"><span>-</span>'+arr[i].num+'<em>+</em></div><div class = "price">'+'￥'+data[arr[i].id].price+'</div></li>';
+                        html2 += data[arr[i].id].price * arr[i].num;
+                        sc_num += arr[i].num;
+                    }
+                    $("#shopCar").find("ul").html(html);
+                    $("#money").html('￥'+html2);
+                    $("#Number").html(sc_num);
+                }
+            }
+        });
+        */
+        //创建cookie;
+        
+        var first = $.cookie("goods") ==null ? true : false;
+        var id = $(".img_red").attr("id");
+        //alert(id)
+        var same = true;
+        if(first){
+            $.cookie("goods", '[{id:'+ id +',num:1}]', {expires:7});
+        }else{
+            var str = $.cookie("goods");
+            var arr = eval(str);
+            for(var i in arr){
+                if(arr[i].id == id){
+                    arr[i].num++;
+                    var cookieStr = JSON.stringify(arr);
+                    $.cookie("goods", cookieStr, {expires:7});
+                    same = true;
+                }
+            }
+            if(!same){
+                var obj = {id: id, num: 1};
+                arr.push(obj);
+                var cookieStr = JSON.stringify(arr);
+                $.cookie("goods", cookieStr, {expires:7});
+            }
+        }      
+        sc_msg();
+    });
+
+    function sc_msg(){
+        var html = '';
+        var str = $.cookie("goods");
+        var arr = eval(str);
+        for(var j in arr){
+            html += '<li><div><input type="checkbox" checked = "checked" /></div><div class = "sc_pic"><img src="../image/big_img/small'+arr[j].id+'.jpg" /></div><div class = "sc_title">女子舒适易弯折跑鞋</div><div class = "sc_num"><span>-</span>'+arr[j].num+'<em>+</em></div><div class = "price">'+'￥339.00</div></li>';
+        }
+        $("#shopCar").find("ul").html(html);
+    }
    
 });
 window.onscroll = function(){    

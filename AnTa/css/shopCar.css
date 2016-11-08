@@ -1,0 +1,379 @@
+/* 
+* @Author: Marte
+* @Date:   2016-11-07 16:07:24
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-08 11:09:23
+*/
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+img{display:block;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:12px; font-family:"微软雅黑";}
+input,a{outline:none;}
+
+/*最顶部*/
+#top{
+    width:100%;
+    height: 30px;
+    background:#FAFAFA;
+    border-bottom: 2px solid #EEEEEE;
+    font-size: 12px;
+    line-height: 30px;
+}
+#top_right{
+    float: right;
+    margin-right: 40px;
+}
+#top_left, #top_left h3,#top_left h4, #top_left h5, #top_right li{
+    float: left;
+}
+#top_left span{
+    color: #DD0000;
+    margin: 0;
+    padding: 0;
+}
+#top_left{
+    margin-left: 60px;
+}
+#top_left h4{
+    padding:0 20px;
+}
+#top_right li a{
+    padding: 0 10px;
+    border-right: 1px solid #DDDDDD;
+}
+#top_right .top_last{
+    border-right: 0;
+}
+/*安踏logo图*/
+#nav{
+    width:100%;
+    height: 100px;
+    border-bottom: 3px solid #F3EBEB;
+}
+#nav_left{
+    float: left;
+    background:url(../image/big_img/logo.gif) no-repeat left center;
+    height: 100px;
+    width:300px;
+    margin-left: 56px;
+}
+#nav_right{
+    float: right;
+    background:url(../image/big_img/car_right.jpg) no-repeat right center;
+    height: 100px;
+    width:400px;
+    margin-right: 40px;
+}
+/*购物车*/
+#shopCar{
+    padding-left: 115px;
+}
+#shopCar h4{
+    padding: 45px 0 8px 0; 
+    font-weight: 600;
+    font-size: 20px;
+}
+#shopCar #car{
+    border: 1px solid #DDDDDD;
+    width:1050px;
+    height: auto;
+    font-size: 12px;
+    color:#000000;
+}
+#realCar .menu div{
+    float: left;
+    margin: 0 20px;
+    text-align: center;
+}
+#realCar .menu .title{
+    width:150px;
+    text-align: center;
+    margin-left: 20px;
+}
+#realCar .menu .price{
+    margin-left: 20px;
+}
+#realCar .menu .score{
+    margin-left: 100px;
+}
+#realCar .menu{
+    width:1050px;
+    height: 72px;
+    background: #F5F5F5;
+    line-height: 72px;
+}
+#realCar{
+    width:1050px;
+    height: auto;
+    display:none;
+}
+#realCar .menu .chBox{
+    width:70px; 
+    height:72px;
+}
+#realCar .menu .chBox .check{
+    margin: 30px 0 0 10px;
+}
+#car h5{
+    padding: 44px 0;
+    text-align: center;
+    background:url(../image/big_img/car_03.jpg) no-repeat 270px center #F3F3F3;
+}
+#car h5 a{
+    color: #005EA7;
+}
+#car ul li{
+    width:1050px;
+    height:82px;
+    border-bottom:1px solid #ccc;
+    line-height: 72px;
+    text-align: center;
+    background: #fff;
+}
+#car ul li div{
+    float:left;
+}
+#car .sc_pic{
+    width:72px;
+    height: 72px;
+    margin: 0 30px;
+}
+#car ul li img{
+    width:100%;
+    height:100%;
+}
+#car .shoeNum{
+    width: 78px;
+    height: 72px;
+}
+#car .checkBox{
+    width: 78px;
+    height: 72px;
+}
+#car .checkBox input{
+    margin:30px 0 0 30px;
+}
+#car .title{
+    width: 250px;
+    height: 72px;   
+}
+#car .price{
+    width:50px;
+    height:72px;
+}
+#car .price{
+    width:70px;
+}
+#car .buyNum{
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #CCCCCC;
+    margin:20px;
+}
+#car .buyNum span{
+    float: left;
+    background: #F5F5F5;
+    width:35px;
+    height: 35px;
+    border: 1px solid #CCCCCC;
+}
+#car .buyNum em{
+    font-style: normal;
+    float: right;
+    width:35px;
+    height:35px;
+    background: #F5F5F5;
+    border: 1px solid #CCCCCC;
+}
+#car .score{
+    width: 60px;
+    height: 72px;
+    margin: 0 20px;
+}
+#car .del{
+    width: 72px;
+    height: 72px;
+    margin: 0 30px;
+}
+
+#submmit{
+    width: 1050px;
+    height: 70px;
+    background: #F5F5F5;
+}
+#submmit input{
+    width:130px;
+    height: 30px;
+    border:1px solid #CCCCCC;
+    float: right;
+    margin: 20px 10px;
+}
+#submmit .goOn{
+    background: #fff;
+}
+#submmit .buyBtn{
+    background: #DD0000;
+    color: #fff;
+}
+#delGoods{
+    width: 1050px;
+    height: 100px;
+    background: #fff;
+}
+#delGoods a{
+    font-size: 12px;
+    color: #005EA7;
+    padding: 0 20px;
+}
+#delGoods h2{
+    padding-top:55px;
+    width:500px;
+}
+#delGoods #money{
+    float: right;
+    margin: -50px 30px 0 0;
+    font-size: 16px;
+}
+#delGoods #money span{
+    width:50px;
+    height:50px;
+    display: inline-block;
+    font-size: 17px;
+    color: #DD0000;
+
+}
+/*网页下边的复菜单*/
+#downList{
+    width:100%;
+    background:#F5F5F5;
+    height:205px;
+    border-top: 1px solid #DBDBDB;
+    margin-top:18px;
+    overflow:hidden;
+}
+#downLeft{
+    float:left; 
+    height:150px;
+    border-right: 1px solid #DBDBDB;
+    padding-right: 30px;
+    overflow:hidden; 
+}
+#downLeft .PUL{
+    float:left;
+    margin:0 15px 0 30px;
+}
+#downLeft .PUL p{
+    font-size: 12px;
+    color: #333333;
+    margin-top: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 6px;
+}
+
+#downLeft .PUL ul a{
+    font-size: 10px;
+    color:#333333;
+    display:block;
+    margin: 6px;
+    text-align: center;
+}
+#downLeft .PUL ul a:hover{
+    color: red;
+}
+#downRight{
+    width:375px;
+    height:205px;
+    float:right;
+    background:url(../image/big_img/Tnum.jpg) no-repeat center #F5F5F5;
+    overflow:hidden;
+}
+#downRight span{
+    display:block;
+    width:100px;
+    height:30px;
+    border: 1px solid #DDDDDD;
+    margin: 0 auto;
+    margin-top: 140px;
+    text-align: center;
+    padding-left: 6px;
+    line-height: 30px;
+    background:url(../image/big_img/people.jpg) no-repeat 12px center #FFFFFF;
+}
+
+/*copy区上部*/
+#copyUp{
+    width:100%;
+    height:70px;
+    border-bottom: 1px solid #DDDDDD;
+    overflow:hidden;
+}
+#copyUp li{
+    float:left;
+    font-size: 16px;
+    color:#666666;
+    line-height: 70px;
+    margin-left: 80px;
+}
+#copyUp li span{
+    color:#E64E3E;
+}
+#copyUp .Li1{
+    background:url(../image/big_img/real.jpg) no-repeat left center;
+    padding-left: 30px;
+}
+#copyUp .Li2{
+    background:url(../image/big_img/man.jpg) no-repeat left center;
+    padding-left: 30px;
+}
+#copyUp .Li3{
+    background:url(../image/big_img/bigCar.jpg) no-repeat left center;
+    padding-left: 40px;
+    margin-left: 150px;
+}
+#copyUp .Li4{
+    background:url(../image/big_img/day.jpg) no-repeat left center;
+    padding-left: 38px;
+    /*margin-left: 200px;*/
+}
+/*copy区*/
+#copy{
+    width:100%;
+    height:170px;
+    padding-top: 20px;
+}
+#copy h3{
+    font-size: 12px;
+    color:#A4A4A4;
+    text-align: center;
+    line-height: 24px;
+}
+#copy #copyPic{
+    margin: 6px 0 0 430px;
+}
+#copy #copyPic img{
+    float:left;
+    height:44px;
+}
+#phone{
+    float: right;
+    width:72px;
+    height:200px;
+    margin-right: 35px;
+    overflow: hi;
+}
+#phone img{
+    float: right;
+}
+#phone #No{
+    background: url(../image/big_img/tel_NO.jpg) no-repeat right center;
+    width:72px;
+    height:72px;
+    float: right;
+    margin-top:5px;
+}

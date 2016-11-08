@@ -1,60 +1,60 @@
 
 
 $(function(){
-        //最顶部语言的划过效果；
-        var Box_a = $("#box").find("h4").find("a");
-        Box_a.hover(function(){
-            Box_a.attr("class","");
-            $(this).attr("class", "language");
-        });
+    //最顶部语言的划过效果；
+    var Box_a = $("#box").find("h4").find("a");
+    Box_a.hover(function(){
+        Box_a.attr("class","");
+        $(this).attr("class", "language");
+    });
 
-        //菜单栏划过时下拉菜单显示；
-        var MenuLi = $("#menu").find("ul").find("li");
-        var menuH = $("#menu").find("ul").find("li").eq(1).find(".menu_hover");       
-        $.ajax({
-            url:'../json/menu.json',
-            type:'GET',
-            success:function(data){
-                //克隆li里面的div
-                for(var i = 2; i < 7; i++){
-                    var cloneDiv = menuH.clone();
-                    cloneDiv.appendTo(MenuLi.eq(i));
-                }
-                //获取ajax里的数据；
-                var oDiv = $("#menu").find("ul").find("li").find(".menu_hover");
-                var oBox = oDiv.find(".box");
-                for(var i = 0; i < data.length; i++){
-                    for(var j = 0; j < data[i].type.length - 1; j++){
-                        var clonePul = oBox.find(".Pul").eq(0).clone();
-                        clonePul.appendTo(oBox.eq(i));
-                    }
-                    
-                    for(var k = 0; k < data[i].type.length; k++){
-                        var oPul = oBox.eq(i).find(".Pul");
-                        oPul.find("p").eq(k).html(data[i].type[k].title);
-                        var html = "";
-                        for(var t = 0; t <data[i].type[k].list.length; t++){
-                            html += '<li><a href="#">' + data[i].type[k].list[t].name + '</a></li>'
-                        }
-                        oPul.find("ul").eq(k).html(html);
-                    }
-                }
-                var menu_Li =  $("#menu").find(".out").find(".out_li");
-                //alert(menu_Li.length)
-                menu_Li.mouseenter(function(){
-                    var n = $(this).index();
-                    $(this).find(".menu_hover").css("display", "block");
-                    $(this).find(".menu_hover").find(".box").css("left",$(this).offset().left);
-                    if(n == 6){
-                       $(this).find(".menu_hover").find(".box").css("left",'300px'); 
-                    }
-                });
-                menu_Li.mouseleave(function(){
-                    //var n = $(this).index() - 1;
-                    $(this).find(".menu_hover").css("display", "none");
-                });    
+    //菜单栏划过时下拉菜单显示；
+    var MenuLi = $("#menu").find("ul").find("li");
+    var menuH = $("#menu").find("ul").find("li").eq(1).find(".menu_hover");       
+    $.ajax({
+        url:'../json/menu.json',
+        type:'GET',
+        success:function(data){
+            //克隆li里面的div
+            for(var i = 2; i < 7; i++){
+                var cloneDiv = menuH.clone();
+                cloneDiv.appendTo(MenuLi.eq(i));
             }
-        });
+            //获取ajax里的数据；
+            var oDiv = $("#menu").find("ul").find("li").find(".menu_hover");
+            var oBox = oDiv.find(".box");
+            for(var i = 0; i < data.length; i++){
+                for(var j = 0; j < data[i].type.length - 1; j++){
+                    var clonePul = oBox.find(".Pul").eq(0).clone();
+                    clonePul.appendTo(oBox.eq(i));
+                }
+                
+                for(var k = 0; k < data[i].type.length; k++){
+                    var oPul = oBox.eq(i).find(".Pul");
+                    oPul.find("p").eq(k).html(data[i].type[k].title);
+                    var html = "";
+                    for(var t = 0; t <data[i].type[k].list.length; t++){
+                        html += '<li><a href="#">' + data[i].type[k].list[t].name + '</a></li>'
+                    }
+                    oPul.find("ul").eq(k).html(html);
+                }
+            }
+            var menu_Li =  $("#menu").find(".out").find(".out_li");
+            //alert(menu_Li.length)
+            menu_Li.mouseenter(function(){
+                var n = $(this).index();
+                $(this).find(".menu_hover").css("display", "block");
+                $(this).find(".menu_hover").find(".box").css("left",$(this).offset().left);
+                if(n == 6){
+                   $(this).find(".menu_hover").find(".box").css("left",'300px'); 
+                }
+            });
+            menu_Li.mouseleave(function(){
+                //var n = $(this).index() - 1;
+                $(this).find(".menu_hover").css("display", "none");
+            }); 
+        }
+    });
 
     //菜单吸顶；
     $(window).on("scroll", function(){
@@ -168,10 +168,11 @@ $(function(){
                 for(var j = 0; j < data[i].child.length; j++){    
                     html += '<span><img src = "'+data[i].child[j].img+'"></span>';                        
                 }
-                _oLi.eq(i).find("div").html(html);
-                _oLi.eq(i).find("h5").html(data[i].price + '<span>'+data[i].price2+'</span>');
+                _oLi.eq(i).find(".smallPic").html(html);
+                _oLi.eq(i).find("h5").html('￥'+data[i].price + '<span>'+data[i].price2+'</span>');
                 _oLi.eq(i).find("h4").find("a").html(data[i].title);
                 _oLi.eq(i).find("img")[0].src = data[i].bgUr;
+                _oLi.eq(i).find(".buy").attr("id",data[i].id);
             }
             
             var minIndex = 2;
@@ -194,7 +195,40 @@ $(function(){
                 _oLi[i].style.position = "absolute";
                 _oLi[i].style.margin = "0";
             }
+
+            //购物车获取cookie
+            $("#mainAjax ul").on("click", ".buy", function(){
+                alert("已经成功加入购物车啦");
+                var id = this.id;
+                var first = $.cookie("goods") == null ? true : false;
+                var same = false;
+                if(first){
+                    $.cookie("goods", '[{id:' + id + ',num:1}]', {expires:7});
+                }else{
+                    var str = $.cookie("goods");
+                    var arr = eval(str); //JQ eval() 和 JSON.parse() 作用一致, 都是将字符串转成对应的对象
+                    for(var i in arr){
+                        if(arr[i].id == id){
+                            arr[i].num++;
+                            var cookieStr = JSON.stringify(arr);
+                            $.cookie("goods", cookieStr, {expires:7});
+                            same = true;
+                        }
+                    }
+                    if(!same){
+                        var obj = {id: id, num: 1};
+                        arr.push(obj);
+                        var cookieStr = JSON.stringify(arr);
+                        $.cookie("goods", cookieStr, {expires:7});
+                    }
+                }
+            });   
         }
+
+        
+        
+
+
     });
     //返回顶部；
     $(window).on("scroll", function(){
@@ -207,6 +241,10 @@ $(function(){
         }else{
             $("#fixedBox").css("display", "none");
         }
-    });    
+    });
+
+    
+
+
 }); 
    
