@@ -1,0 +1,157 @@
+.header {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    zoom: 1;
+    text-align: center;
+}
+.register_header {
+    width: 1000px;
+    overflow: hidden;
+    zoom: 1;
+    margin: 10px auto 0px auto;
+    position: relative;
+}
+.register_header .logo {
+    line-height: 82px;
+}
+.register_header .logo img {
+    float: left;
+}
+.register_header .logo .register_headlogo_title {
+    font-family: Helvetica,黑体;
+    font-size: 18px;
+    color: #949292;
+    float: left;
+    padding-left: 10px;
+}
+.register_header_phone {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    line-height: 27px;
+    height: 27px;
+    text-align: center;
+    overflow: hidden;
+}
+.register_header_phone span {
+    font-family: Helvetica,黑体;
+    font-size: 15px;
+    color: #000;
+    float: left;
+}
+.register_header_phone img{
+	float: left;
+}
+/*内容*/
+.sign_in{
+	overflow: hidden;
+    zoom: 1;
+    margin: 0 auto;
+    background: url( ../img/img_login/caigou-bg.jpg) -0px top no-repeat;
+	width: 100%;
+	height: 570px;
+}
+.si_center{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+.si_left {
+    width: 705px;
+    height: 680px;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: -140px;
+     background: url( ../img/img_login/caigou-icon.png) no-repeat; ;
+}
+.si_right{
+    width: 450px;
+    background-color: #fff;
+    float: right;
+    margin-top: 47px;
+    margin-left: 10px;
+    -webkit-box-shadow: #afabab 0px 0px 8px;
+    box-shadow: #afabab 0px 0px 8px;
+}
+.si_box{
+	width: 300px;
+    margin: 45px auto;
+    text-align: left;
+}
+.si_box p{
+	padding-left: 25px;
+}
+.si_box .word{
+	width: 100%;
+    padding-bottom: 12px;
+    text-align: left;
+    overflow: hidden;
+    color: #6d6d6d;
+    font-size: 15px;
+    border-bottom: #ccc solid 1px;
+    margin-bottom: 32px;
+}
+.si_box .login_con{
+	height: 64px;
+}
+.login_con input {
+	padding-left: 33px;
+    width: 217px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    background: url( ../img/img_login/login_reg_input_user_bg.jpg) no-repeat left top;
+}
+.login_con span{
+	display: inline-block;
+    font-size: 12px;
+    color: #333;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    width: 250px;
+    border: 1px solid #ff9ba5;
+    background: #fee0e3;
+    display: none;
+}
+.me{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.me a {
+    color: #a78668;
+    text-decoration: underline;
+    margin-left: 45px;
+}
+.submit{
+	margin-top:10px ;
+}
+.submit input{
+	display: inline;
+    width: 250px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 16px;
+    border: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #cf0101;
+}
+.login_none{
+	text-align: right;
+	padding-right: 25px;
+}
+.login_hezuo{
+	margin-top: 20px;
+	border-top: 1px solid #CCCCCC;
+	padding-top: 20px;
+	text-align: left;
+}
+

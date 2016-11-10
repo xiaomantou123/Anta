@@ -1,0 +1,719 @@
+/*轮播图*/
+#Shuffling{
+	background: #000;
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+}
+#Shuffling #s_play{
+  position: relative;
+  height: 520px;
+  width: 11520px;
+}
+#Shuffling #s_play li{
+    height: 520px;
+    float: left;
+}
+#Shuffling #s_play li img{
+	background: #000;
+    height: 520px;
+    float: left;
+}
+.point{
+    height: 16px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -85px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: absolute;
+    width: 170px;
+    overflow: hidden;   
+ }
+.point li{
+    width: 12px;
+    height: 12px;
+    display: block;
+    float: left;
+    margin: 2px 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    }
+ #Shuffling .point .active{
+    background: #D00000;
+ } 
+ #Shuffling .s_gt{
+   position: absolute;
+   right: 200px;
+   width: 29px;
+   height: 49px;
+   top: 50%;
+   margin-top: -25px;
+   z-index: 30;
+ }
+#Shuffling .s_lt{
+   position: absolute;
+   left: 200px;
+   width: 29px;
+   height: 49px;
+   top: 50%;
+   margin-top: -25px;
+    z-index: 30;
+ }
+ /*中间品牌*/
+.flag{
+	margin-top:30px;
+	margin-bottom: 20px;
+} 
+/*商品列表*/  
+.boss .flag_list li{
+	margin-right: 7px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+} 
+
+
+.flag_list a{
+	overflow: hidden;
+}  
+.flag_hide{
+	width: 106px;
+	height: 154px;
+	padding: 0 34px 0 34px;
+	position: absolute;
+	bottom : -88px;
+	left: 50%;
+	margin-left: -87px;
+	background: white;
+}
+.flag_hide img{
+	width: 60px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    display: block;
+}
+.flag_hide p{
+	font-size: 14px;
+	text-align: center;
+}
+.flag_hide p span{
+	display: inline-block;
+    width: 20px;
+    height: 2px;
+    background: #000;
+}
+/*品牌线*/
+.moncler{
+	overflow: hidden;
+}
+.moncler .mon_cot{
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.moncler .mon_cot li{
+	float: left;
+	width: 107px;
+    height: 55px;
+    padding: 14px 29px;
+    border: 1px solid #dfdfdf;
+    margin-right: 5px;
+    margin-bottom: 7px;
+}
+.moncler .mon_cot img{
+	display: block;
+	width: 107px;
+    height: 54px;
+}
+.moncler .mon_cot .mon_hide{
+	position: absolute;
+    left: 29px;
+    top: 14px;
+    opacity: 0;
+    width: 107px;
+    height: 42px;
+    padding-top: 12px;
+    background: #fff;
+    overflow: hidden;
+}
+.moncler .mon_cot .mon_hide p{
+	font-size: 18px;
+	text-align: center;
+}
+.moncler .mon_cot .mon_hide .h_line{
+    width: 20px;
+    height: 2px;
+    background: #000;
+    margin: 0 auto;
+}
+.moncler .mon_cot .topline {
+    width: 0;
+    height: 1px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background: #000;
+    transition: all 0.5s ease-out;
+}
+.rightline {
+    width: 1px;
+    height: 0;
+    position: absolute;
+    bottom: 7px;
+    right: 4px;
+    background: #000;
+    transition: all 0.5s ease-out;
+}
+.bottomline {
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 6px;
+    right: 5px;
+    background: #000;
+    transition: all 0.5s ease-out;
+}
+.leftline {
+    width: 1px;
+    height: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #000;
+    transition: all 0.5s ease-out;
+}
+/*热卖品牌*/
+.sale{
+	margin-bottom: 15px;
+}
+.sale_list{
+	overflow: hidden;
+}
+.sale_list li{
+	float: left;
+    width: 398px;
+    height: 30px;
+    background: #999;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.sale_list .active_hot{
+	background: #000000;
+}
+.tab{
+	width:1210px;
+	height: 522px;
+	position: relative;
+	overflow: hidden;
+}
+.tab_hot{
+	width: 3630px;
+	height: 522px;
+	overflow: hidden;
+	position: absolute;
+}
+.storesame{
+	float: left;
+	overflow: hidden;
+}
+.store_left{
+	float: left;
+	overflow: hidden;
+}
+.store_right{
+	float: left;
+	overflow: hidden;
+}
+.store_rtop{
+	overflow: hidden;
+}
+.store_rbottom{
+	overflow: hidden;
+}
+.store_rtop li{
+	margin-left: 7px;
+	margin-bottom: 7px;
+	position: relative;
+}
+.store_rtop li .top_img{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.store_one{
+	width: 223px;
+    height: 245px;
+    text-align: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    float: left;
+}
+.store_one .top_text{
+	font-size: 13px;
+    color: #666;
+    display: inline-block;
+    position: relative;
+}
+
+.store_one .top_img img{
+	width: 220px;
+	height: 150px;
+}  
+.store_two{
+	overflow: hidden;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 369px;
+    height: 245px;
+    float: left;
+    position: relative;
+}
+.store_rtop .store_two .top_text2{
+	width: 85px;
+    height: 72px;
+    font-size: 13px;
+    color: #666;
+    display: inline-block;
+    position: absolute;
+    left: 68px;
+    top: 20px;
+} 
+.store_two .top_img2{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	top: 28px;
+	right:40px;
+}
+.store_two .top_img2 img{
+	display: block;
+	width: 180px;
+	height: 180px;
+}   
+.store_rbottom li{
+	margin-left: 7px;
+	overflow: hidden;
+}
+.store_bottom{
+	width: 272px;
+    height: 255px;
+    text-align: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    float: left;
+}
+.store_bottom .bottom_text{
+	font-size: 13px;
+    color: #666;
+    display: inline-block;
+    position: relative;
+}
+.store_bottom .bottom_img{
+	position: relative;
+	left: 0;
+	bottom: 0;
+} 
+.store_bottom .bottom_img img{
+	width: 271px;
+	height: 150px;
+} 
+.storesame3 .store_left3{
+	width: 398px;
+	height: 520px;
+	float: left;
+	margin-right: 7px;
+	position: relative;
+	
+}
+.storesame3 .store_left3 img{
+	width: 398px;
+	height: 520px;
+	display: block;
+	position: absolute;
+	z-index: -1;
+}
+.storesame3 .store_right3{
+	float: left;
+}
+.storesame3 .store_right3 ul{
+	width: 805px;
+	height: 520px;
+	overflow: hidden;
+}
+.storesame3 .store_right3 ul li{
+	float: left;
+    width: 395px;
+    height: 256px;
+    margin-right: 7px;
+    margin-bottom: 7px;	
+    position: relative;
+}
+.r_hide{
+	width: 398px;
+	height: 520px;
+	position: absolute;
+    background: url(../img/img_index/darwin_mask_bg.png);
+    display: none;
+}
+.r_hide1{
+	width: 395px;
+	height: 256px;
+	position: absolute;
+    background: url(../img/img_index/darwin_mask_bg.png);
+    display: none;
+    top: 0;
+    left: 0;
+}
+.r3_hide{
+	display: block;
+    width: 260px;
+    height: 120px;
+    padding-top: 20px;
+    margin: 190px auto;
+    font-size: 18px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    z-index: 6;
+}
+.r3_hide1{
+	display: block;
+    width: 260px;
+    height: 120px;
+    padding-top: 20px;
+    margin: 40px auto;
+    font-size: 18px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    
+}
+.r3_hide p,.r3_hide1 p{
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 5px;
+	color: white;
+}
+.r3_hide b,.r3_hide1 b{
+	display: block;
+    width: 18px;
+    height: 3px;
+    background-color: #fff;
+    margin: 10px auto;
+}
+.r3_hide1 b{
+	display: block;
+    width: 18px;
+    height: 3px;
+    background-color: #fff;
+    margin: 10px auto;
+}
+.r3_hide span,.r3_hide1 span{
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	color: white;
+}
+.shopcenter{
+	overflow: hidden;
+}
+.shopcenter li{
+	float: left;
+    width: 234px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 8px;
+    background: #DFDFDF;
+}  
+.shopbox{
+	position: absolute;
+	top:0px;
+	left: 0px;
+}  
+.shopbox .box_top{
+	width: 234px;
+    height: 50px;
+    line-height: 50px;
+    background: #999;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+} 
+.shopbox .box_bottom{
+    width: 234px;
+    height: 40px;
+    padding: 5px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+.shopbox .box_bottom .en{
+	border: 1px solid #fff;
+    width: 223px;
+    height: 40px;
+    line-height: 40px;
+}  
+.rigth_but{
+	float: right;
+    overflow: hidden;
+    height: 60px;
+    line-height: 60px;
+}
+.rigth_but .icon{
+	float: right;
+    background: url(../img/img_index/share02.png) no-repeat -470px -360px;
+    width: 18px;
+    height: 60px;
+    margin-left: 6px;
+} 
+.rigth_but .moretxt{
+	float: right;
+    font-size: 16px;
+}
+.bag{
+	overflow: hidden;
+}
+.bag_left{
+	float: left;
+    width: 220px;
+    height: 366px;
+    border: 1px solid #ccc;
+    padding: 0 9px;
+    padding-top: 4px;
+    margin-right: 8px;
+}
+.bag_ltop{
+	overflow: hidden;
+    border-bottom: 1px dashed #d4d4d4;
+    padding-bottom: 16px;
+}
+.bag_ltop li{
+	float: left;
+    line-height: 36px;
+    width: 110px;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
+.slider{
+	position: relative;
+	overflow: hidden;
+}
+.slider_top{
+	width: 880px;
+	height: 114px;
+	overflow: hidden;
+	margin-top: 14px;
+	position: relative;
+} 
+.slider_top li{
+	float: left;
+	width:220px;
+	height: 114px;
+	
+}
+.slider_top li img{
+    border: none !important;
+    width: 90px !important;
+    height: auto !important;
+    margin-bottom: 12px !important;
+    margin-left: 12px !important;
+	
+}
+.slider_bottom{
+	width: 220px;
+	height: 27px;
+	position: relative;
+} 
+.ul_but{
+	width: 65px;
+	height: 14px;
+	margin: 0 auto;
+	margin-top: 15px;
+	
+} 
+.ul_but li{
+	width: 9px;
+	height: 9px;
+	background: #666;
+	float: left;
+	border-radius: 50%;
+	margin: 0 5px;
+} 
+.ul_but .active_btn{
+	background:#c77f40;
+}
+.slider_lt{
+	position: absolute;
+    width: 14px;
+    height: 22px;
+    left: 62px;
+    bottom: 14px;
+    color: #666666;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.slider_gt{
+	position: absolute;
+    width: 14px;
+    height: 22px;
+    right: 75px;
+    bottom: 14px;
+    color: #666666;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.bag_center{
+	width: 390px;
+	margin-right: 8px;
+	height: 370px;
+	position: relative;
+	float: left;
+}
+.bag_center img{
+	width: 390px;
+	height: 370px;
+}
+.bag_right{
+	width: 562px;
+	height: 372px;
+	float: left;
+	overflow: hidden;
+}
+.bag_right li{
+	width: 280px;
+    height: 188px;
+    
+    float: left;
+    
+}
+.bag_right li img{
+	margin-right: 7px;
+    margin-bottom: 7px;
+	width: 272px;
+    height: 180px;
+    border: 1px solid #ccc;    
+}
+._slider_bord {
+    width: 250px;
+    height: 90px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -125px;
+    background: url(../img/img_index/darwin_mask_bgfff.png);
+}
+._slider_bord dl {
+    padding-top: 5px;
+}
+._slider_bord dl dd {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+}   
+._slider_bord dl dt {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    line-height: 17px;
+}
+/*主题活动*/
+.promotion1{
+	overflow: hidden;
+	margin-bottom: 10px;
+} 
+.promotion1_left img{
+	float: left;
+	margin-right:10px;
+	width: 594px;
+	height:293px ;
+} 
+.promotion1_center img,.promotion1_right img{
+	float: left;
+	margin-right: 10px;
+	width: 293px;
+	height: 293px;
+}
+.promotion1_left,.promotion1_center,.promotion1_right{
+	float: left;
+}  
+.promotion2{
+	overflow: hidden;
+	margin-bottom: 50px;
+}    
+.promotion2_left{
+	float: left;
+	width: 607px;
+	height: 146px;
+} 
+.promotion2_left li{
+	margin-right: 10px;
+	float: left;
+	border:1px solid #CCCCCC;
+	margin-bottom: 10px;
+	position: relative;
+}
+.promotion2_left li img{
+	width:190px ;
+	height: 63px;
+	display: block;
+}
+.promotion2_right{
+	width: 590px;
+	height: 138px;
+	float: left;
+	position:relative;
+} 
+.promotion2_right img{
+	width: 593px;
+	height: 138px;
+	position:absolute;
+	display: none;
+	left: 0;
+	top: 0;
+} 
+.R_line {
+    width: 1px;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: #000;
+    -webkit-transition: all 0.5s ease-out;
+}
+.L_line {
+    width: 1px;
+    height: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #000;
+     -webkit-transition: all 0.5s ease-out;
+}
+.T_line {
+    width: 0px;
+    height: 1px;
+    position: absolute;
+    top:-1px;
+    left: 0px;
+    background: #000;
+    -webkit-transition: all 0.5s ease-out;
+}
+.B_line {
+    width: 0px;
+    height: 1px;
+    position: absolute;
+    bottom: 1px;
+    right: 0px;
+    background: #000;
+    -webkit-transition: all 0.5s ease-out;
+}   
+

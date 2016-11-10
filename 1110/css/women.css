@@ -1,0 +1,202 @@
+.w_1000{
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.women_banner{
+	position: relative;
+}
+.b_link{
+	position: absolute;
+	width: 1000px;
+	height: 460px;
+	display: block;
+	top: 0px;
+	left: 0px;
+}
+.recommend{
+	width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    position: relative;
+    z-index: 0;
+}
+.all_brands{
+	float: right;
+	color: #000000;
+	font-size: 13px;
+    font-weight: bold;
+    display: block;
+    width: 86px;
+    height: 45px;
+    float: right;
+    line-height: 60px;
+    vertical-align: middle;
+    background: url(../img/img_women/more.png) no-repeat top right;
+}
+.shadow{
+	width: 1000px;
+    margin: 0px auto;
+    overflow: hidden;
+    zoom: 1;
+    -webkit-box-shadow: #a7a7a7 0px 2px 14px;
+    box-shadow: #a7a7a7 0px 2px 16px;
+    background: #fff;
+}
+.brand_content {
+    padding: 20px 0;
+    overflow: hidden;
+}
+.brand_content li{
+    width: 200px;
+    height: 240px;
+    position: relative;
+    float: left;
+}
+.brand_content li img{
+    width: 180px;
+    height: 240px;
+    margin: 0 auto;
+    display: block;
+}
+.brand_content li p{
+    width: 180px;
+    height: 240px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 240px;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    display: none;
+}
+.w_categories{
+	padding-top: 10px;
+}
+.w_sort{
+	float: left;
+    padding: 8px 0;
+    display: inline;
+    position: relative;
+    min-height: 134px;
+    border-right: 1px dashed #9e9e9e;
+    width: 245px;
+}
+.wca_logo {
+    width: 35px;
+    position: absolute;
+    top: 8px;
+    left: 18px;
+}
+.wca_logo img{
+    width: 35px;
+}
+.wca_list {
+    display: inline-block;
+    margin-left: 56px;
+}
+.wca_list h3 {
+    text-align: center;
+    display: inline-block;
+    padding: 0px 4px;
+    width: auto;
+}
+.wca_item li {
+    padding: 0px 5px;
+    margin-right: 6px;
+    float: left;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-top: 3px;
+}
+.xbbg {
+    width: 100%;
+    background-color: #e6e6e6;
+}
+.Htop_left{
+	float: left;
+}
+.Htop_left img{
+	display: block;
+}
+.Htop_right{
+	float: right;
+	max-width: 710px;
+    display: inline-table;
+    overflow: hidden;
+    zoom: 1;
+}
+.Htop_right li {
+    float: left;
+    padding: 0px 12px 0px 12px;
+    height: 90px;
+    line-height: 90px;
+    vertical-align: middle;
+}
+.Lim_left{
+	float: left;
+	width: 606px;
+    margin-left: 12px;
+    margin-right: 7px;
+}
+.Lim_left img{
+	display: block;
+	width: 606px;
+}
+.Lim_right{
+	width: 353px;
+	float: left;
+	
+}
+.Lim_right img{
+	display: block;
+	width: 353px;
+	height: 148px;
+}
+.bags_list li {
+    width: 200px;
+    float: left;
+    padding: 25px 0;
+}
+.list_img{
+    width: 183px;
+    padding-bottom: 12px;
+    position: relative;
+    margin: 0 auto;
+}
+.list_img img{
+    width: 183px;
+    height: 205px;
+    padding-bottom: 12px;
+    position: relative;
+    margin: 0 auto;
+}
+.list_p{
+	width: 183px;
+    text-align: center;
+    padding-bottom: 5px;
+    margin: 0 auto;
+}
+.p_title {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 8px;
+}
+.sale_price em {
+    color: #df3338;
+    font-size: 14px;
+}
+.sale_price em strong {
+    font-size: 12px;
+}
+
+	
