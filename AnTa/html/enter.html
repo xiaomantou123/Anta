@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>登录</title>
+        <script type="text/javascript" src = "../js/jquery-1.10.1.min.js">
+        </script>
+        <script type="text/javascript" src = "../js/enter.js"></script>
+        <script type="text/javascript" src = "../js/jquery.cookie.js">
+        </script>
+        <link rel="stylesheet" type="text/css" href="../css/enter.css" />
+    </head>
+    <body>
+        <div id = "logo">
+        </div>
+        <div id = "main">
+            <div id = "left">
+                <a target = "_blank" href="../index.html">< 返回安踏官网</a>
+                <img src="../image/VIP_img/01.png" />
+            </div>
+            <div id = "center" >
+                <h3>账户登录</h3>
+                <!-- 账户登录 -->
+                <div id = "ent">
+                    <input class = "userName" type = "text" placeholder = "邮箱或手机号"/>
+                    <div class = "errorShow" style = "top:12px">邮箱或手机号有误，请重新输入</div>
+                    <input type="password" placeholder = "密码"/>
+                    <div class = "errorShow pass" style = "top:75px" calss = "password">密码有误，请重新输入</div>
+                    <input type="text" placeholder = "验证码" class = "code_input"/>
+                    <div class = "codeBox" style = "top:150px">
+                        <div class = "code"></div>
+                    </div>
+                    <p class = "forgot"><a href="#">忘记密码？</a></p>
+                    <button id = "btn">登录</button>
+                    <a href="login.html">
+                        <button id = "login">免费注册</button>
+                    </a>
+                    <h5>Copyright(C) 2015 by www.anta.com</h5>
+                </div>   
+            </div>
+            <div id = "right">
+                <h4>其他登录方式</h4>
+                <ul>
+                   <a href = "#"><li class = "li1"></li></a>
+                   <a href = "#"><li class = "li2"></li></a>
+                   <a href = "#"><li class = "li3"></li></a>
+                   <a href = "#"><li class = "li4"></li></a>
+                </ul>
+                <div id = "two">
+                    <img src="../image/VIP_img/qrcode.jpg" />
+                    <p>微信加关注 享专属优惠</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

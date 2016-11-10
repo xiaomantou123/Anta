@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-07 16:07:24
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-08 11:09:23
+* @Last Modified time: 2016-11-09 10:20:30
 */
 body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
 img{display:block;}
@@ -114,6 +114,7 @@ input,a{outline:none;}
 #realCar .menu .chBox{
     width:70px; 
     height:72px;
+    margin: 0;
 }
 #realCar .menu .chBox .check{
     margin: 30px 0 0 10px;
@@ -145,13 +146,16 @@ input,a{outline:none;}
 #car ul li img{
     width:100%;
     height:100%;
+    margin-left: 20px;
 }
 #car .shoeNum{
-    width: 78px;
+    width: 50px;
     height: 72px;
+    margin-left: 40px;
+    padding-left: 50px;
 }
 #car .checkBox{
-    width: 78px;
+    width: 40px;
     height: 72px;
 }
 #car .checkBox input{
@@ -164,6 +168,7 @@ input,a{outline:none;}
 #car .price{
     width:50px;
     height:72px;
+    margin-left: -30px;
 }
 #car .price{
     width:70px;
@@ -175,20 +180,28 @@ input,a{outline:none;}
     border: 1px solid #CCCCCC;
     margin:20px;
 }
-#car .buyNum span{
+#car .buyNum .add{
     float: left;
     background: #F5F5F5;
     width:35px;
     height: 35px;
     border: 1px solid #CCCCCC;
+    font-size: 15px;
+    cursor: pointer;
 }
-#car .buyNum em{
+#car .buyNum p{
+    display: inline-block;
+}
+#car .buyNum .minus{
     font-style: normal;
     float: right;
     width:35px;
     height:35px;
     background: #F5F5F5;
     border: 1px solid #CCCCCC;
+    font-size: 15px;
+    cursor:pointer;
+    font-size: 20px;
 }
 #car .score{
     width: 60px;
@@ -199,6 +212,7 @@ input,a{outline:none;}
     width: 72px;
     height: 72px;
     margin: 0 30px;
+    cursor:pointer;
 }
 
 #submmit{
@@ -292,6 +306,7 @@ input,a{outline:none;}
     float:right;
     background:url(../image/big_img/Tnum.jpg) no-repeat center #F5F5F5;
     overflow:hidden;
+    margin-right: 100px;
 }
 #downRight span{
     display:block;

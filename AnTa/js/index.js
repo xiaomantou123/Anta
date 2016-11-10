@@ -33,7 +33,7 @@ $(function(){
                     oPul.find("p").eq(k).html(data[i].type[k].title);
                     var html = "";
                     for(var t = 0; t <data[i].type[k].list.length; t++){
-                        html += '<li><a href="#">' + data[i].type[k].list[t].name + '</a></li>'
+                        html += '<li><a href="html/runShoes.html">' + data[i].type[k].list[t].name + '</a></li>'
                     }
                     oPul.find("ul").eq(k).html(html);
                 }

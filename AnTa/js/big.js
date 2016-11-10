@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-01 17:51:53
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-08 17:06:10
+* @Last Modified time: 2016-11-08 17:24:38
 */
 
 $(document).ready(function(){
@@ -216,9 +216,9 @@ $(document).ready(function(){
     //点击加入购物车，购物车显示；
     var addCar = $("#buy").find(".car");
     addCar.click(function(){
-        sc_msg();
+        //sc_msg();
         startMove(allRight, {right:0});
-        /*
+        
         $.ajax({
             url:'../json/runShoe.json',
             type:'GET',
@@ -240,9 +240,9 @@ $(document).ready(function(){
                 }
             }
         });
-        */
-        //创建cookie;
         
+        /*
+        //创建cookie;
         var first = $.cookie("goods") ==null ? true : false;
         var id = $(".img_red").attr("id");
         //alert(id)
@@ -268,8 +268,9 @@ $(document).ready(function(){
             }
         }      
         sc_msg();
+        */
     });
-
+    /*
     function sc_msg(){
         var html = '';
         var str = $.cookie("goods");
@@ -279,7 +280,8 @@ $(document).ready(function(){
         }
         $("#shopCar").find("ul").html(html);
     }
-   
+    */
+    
 });
 window.onscroll = function(){    
     var top = document.documentElement.scrollTop ||

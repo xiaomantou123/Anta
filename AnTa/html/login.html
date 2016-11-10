@@ -2,107 +2,11 @@
 <html>
     <head>
         <meta charset = "utf-8"/>
-        <title>登录/注册</title>
+        <title>注册</title>
         <script type="text/javascript" src = "../js/jquery-1.10.1.min.js">
         </script>
-        <script type="text/javascript">
-        $(function(){
-            //四个小图标的滑动效果；
-            var aLi = $("#right").find("ul").find("li");
-            aLi.hover(function(){
-                $(this).animate({'backgroundPosition':-52 -0});
-            },function(){
-                $(this).animate({'backgroundPosition':-0 -0})
-            });
-
-            //注册方式的切换
-            $("#login2").click(function(){
-                $(this).css("background", "#D71722").css("color", "#fff");
-                $("#phone").css("display", "block");
-                $("#login1").css("background", "#E4E4E4").css("color", "#000");
-                $("#e_mail").css("display", "none");
-            });
-            $("#login1").click(function(){
-                $(this).css("background", "#D71722").css("color", "#fff");
-                $("#phone").css("display", "none");
-                $("#login2").css("background", "#E4E4E4").css("color", "#000");
-                $("#e_mail").css("display", "block");
-            });
-        
-
-            //邮箱的验证；
-            var phoneInput = $("#phone").find('input');
-            var mailInput = $('#e_mail').find("input");
-            mailInput[0].onblur = function(){
-                var errorShow = $(this).siblings(".errorShow").eq(0);
-                var oValue = $(this).val();
-                if(/^\w+@\w+(\.\w+)+$/g.test(oValue) == true){
-
-                }else{
-                    errorShow.css("display", "block").css("color", "red");
-                    $(this).css("backgroundColor", "#FDF5F3").css("border","1px solid red");
-                }
-            }
-
-            //密码验证；         
-            mailInput.eq(1).add(phoneInput.eq(1)).blur(function(){
-                var errorShow = $(this).siblings(".errorShow").eq(1);
-                var oValue = $(this).val();
-                if(oValue.length >= 6 && oValue.length <= 18){
-
-                }else{
-                    errorShow.css("display", "block").css("color", "red");
-                    $(this).css("backgroundColor", "#FDF5F3").css("border","1px solid red");                 
-                }
-            });
-
-            //确认密码；
-            mailInput.eq(2).add(phoneInput.eq(2)).blur(function(){
-                var errorShow = $(this).siblings(".errorShow").eq(2);
-                var oValue = $(this).val();
-                if(oValue == mailInput.eq(1).val()){
-
-                }else{
-                    errorShow.css("display", "block").css("color", "red");
-                    $(this).css("backgroundColor", "#FDF5F3").css("border","1px solid red"); 
-                }
-            });
-            //验证码的获取；
-            function fourCode(n){
-                var str = "";
-                for(var i = 0; i < n; i++){
-                    var m = parseInt(Math.random()*10);
-                    str += m;
-                }
-                return str;
-            }
-            $(".code").html(fourCode(4));
-            $(".code").click(function(){
-                $(this).html(fourCode(4));
-            });
-            //验证码的验证；
-            mailInput.eq(3).add(phoneInput.eq(3)).blur(function(){
-                var oValue = $(this).val();
-                if(oValue == $(".code").html()){
-
-                }else{
-                    $(this).css("backgroundColor", "#FDF5F3").css("border","1px solid red"); 
-                }
-            });
-            //手机号的验证；
-            phoneInput.eq(0).blur(function() {
-                var errorShow = $(this).siblings(".errorShow").eq(0);
-                var oValue = $(this).val();
-                if(/^13[0-9]{9}$/.test(oValue) || /^15[0-9]{9}$/.test(oValue) || /^18[0-9]{9}$/.test(oValue)){
-
-                }else{
-                    errorShow.css("display", "block").css("color", "red");
-                    $(this).css("backgroundColor", "#FDF5F3").css("border","1px solid red"); 
-                }
-            });
-
-        });
-
+        <script type="text/javascript" src = "../js/login.js"></script>
+        <script type="text/javascript" src = "../js/jquery.cookie.js">
         </script>
         <link rel="stylesheet" type="text/css" href="../css/login_style.css" />
     </head>
@@ -122,40 +26,40 @@
                 </div>
                 <!-- 邮箱注册 -->
                 <div id = "e_mail">
-                <input class = "email" type = "text" placeholder = "邮箱"/>
-                <div class = "errorShow" style = "top:5px">邮箱有误，请重新输入</div>
-                <input type="password" placeholder = "密码"/>
-                <div class = "errorShow pass" style = "top:75px" calss = "password">密码有误，请重新输入</div>
-                <input type="password" placeholder = "请确认密码" class = "Repassword"/>
-                <div class = "errorShow repass" style = "top:140px">确认密码有误，请重新输入</div>
-                <input type="text" placeholder = "验证码" class = "code_input"/>
-                <div class = "codeBox" style = "top:215px">
-                    <div class = "code"></div>
-                </div>
-                <span></span>
-                <input type="button" value="提交" id = "btn"/>
-                <div id = "last"><a href="#">我已有账号,现在登录</a></div>
-                <h5>Copyright(C) 2015 by www.anta.com</h5>
+                    <input class = "email" type = "text" placeholder = "邮箱"/>
+                    <div class = "errorShow" style = "top:5px">邮箱有误，请重新输入</div>
+                    <input type="password" placeholder = "密码"/>
+                    <div class = "errorShow pass" style = "top:75px" calss = "password">密码有误，请重新输入</div>
+                    <input type="password" placeholder = "请确认密码" class = "Repassword"/>
+                    <div class = "errorShow repass" style = "top:140px">确认密码有误，请重新输入</div>
+                    <input type="text" placeholder = "验证码" class = "code_input"/>
+                    <div class = "codeBox" style = "top:215px">
+                        <div class = "code"></div>
+                    </div>
+                    <span></span>
+                    <input type="button" value="提交" class = "btn"/>
+                    <div id = "last"><a href="enter.html">我已有账号,现在登录</a></div>
+                    <h5>Copyright(C) 2015 by www.anta.com</h5>
                 </div>
                 <!-- 手机号注册 -->
                 <div id = "phone">
-                <input type="text" placeholder = "手机号"/>
-                <div class = "errorShow" style = "top:5px">手机号有误，请重新输入</div>
-                <input type="password" placeholder = "密码" calss = "password"/>
-                <div class = "errorShow pass" style = "top:82px">密码有误，请重新输入</div>
-                <input type="password" placeholder = "请确认密码" class = "Repassword"/>
-                <div class = "errorShow repass" style = "top:150px" >确认密码有误，请重新输入</div>
-                <input type="text" placeholder = "验证码" class = "code_input"/>
-                <div class = "codeBox" style = "top:215px">
-                    <div class = "code"></div>
-                </div>
-                <input type="text" placeholder = "手机验证码"/>
-                <div class = "phoneCode" style="top:283px">
-                    <input type="button" value="发送验证码" class = "sendCode"/>
-                </div>
-                <input type="button" value="提交" id = "btn"/>
-                <div id = "last"><a href="#">我已有账号,现在登录</a></div>
-                <h5>Copyright(C) 2015 by www.anta.com</h5>
+                    <input type="text" placeholder = "手机号"/>
+                    <div class = "errorShow" style = "top:5px">手机号有误，请重新输入</div>
+                    <input type="password" placeholder = "密码" calss = "password"/>
+                    <div class = "errorShow pass" style = "top:82px">密码有误，请重新输入</div>
+                    <input type="password" placeholder = "请确认密码" class = "Repassword"/>
+                    <div class = "errorShow repass" style = "top:150px" >确认密码有误，请重新输入</div>
+                    <input type="text" placeholder = "验证码" class = "code_input"/>
+                    <div class = "codeBox" style = "top:215px">
+                        <div class = "code"></div>
+                    </div>
+                    <input type="text" placeholder = "手机验证码"/>
+                    <div class = "phoneCode" style="top:283px">
+                        <input type="button" value="发送验证码" class = "sendCode"/>
+                    </div>
+                    <input type="button" value="提交" class = "btn"/>
+                    <div id = "last"><a href="#">我已有账号,现在登录</a></div>
+                    <h5>Copyright(C) 2015 by www.anta.com</h5>
                 </div>
                 
             </div>

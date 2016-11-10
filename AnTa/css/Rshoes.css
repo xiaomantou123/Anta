@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-10-29 10:51:52
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-08 11:54:32
+* @Last Modified time: 2016-11-10 12:10:26
 */
 
 #menubg{  
@@ -85,12 +85,17 @@
     line-height: 45px;
     color:#666666;
     margin-right: 40px;
+    position:absolute;
+    top: 0px;
+    left: 700px;
+    z-index: 10;
 }
 .mainRight #right{ 
     width:1000px;
     float: right;
     margin-top: 40px;
     margin-bottom: 15px;
+    position:relative;
 }
 #chose span{ 
     float:right;
@@ -100,6 +105,7 @@
     height:45px; 
     overflow: hidden;
 }
+
 #chose ul li{ width:210px; 
     height:45px; 
     border:1px solid #DDDDDD; 
@@ -235,14 +241,14 @@
     background:#fff;
 }
 #ShCar{
-    width:100px;
-    height: 30px;
+    width:20px;
+    height: 60px;
     background:red;
     position: fixed;
     bottom: 200px;
     right:30px;
     text-align: center;
-    line-height: 30px;
+    line-height: 20px;
 }
 #ShCar a{
     color: #fff;
