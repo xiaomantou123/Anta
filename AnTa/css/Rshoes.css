@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-10-29 10:51:52
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-10 12:10:26
+* @Last Modified time: 2016-11-10 15:23:37
 */
 
 #menubg{  
@@ -12,7 +12,10 @@
     position:relative; 
     overflow:hidden; 
 }
-
+#copybg, #attentionbg{
+    width:100%;
+    background:#F2F2F2;
+}
 #menu .search{
     background:url(../image/Runshorts_img/search.jpg) no-repeat center; 
     border:0;
@@ -23,9 +26,13 @@
     top:0; 
     left:0;
     overflow:hidden;
-    width:100%;}
+    width:100%;
+}
 #banner ul li{
     height:396px; 
+    width:100%;
+}
+#banner img{
     width:100%;
 }
 
@@ -37,10 +44,13 @@
     position:relative;
     top:0px;
 }
+#main{
+    width:1210px;
+    margin: 0 auto;
+}
 .mainLeft{ 
     float: left; 
-    width: 220px; 
-    margin-left: 20px; 
+    width: 200px;  
     border: 1px solid #CCCCCC; 
     overflow:hidden;
     margin-top:40px ;
@@ -50,8 +60,8 @@
 .mainLeft ul li{ 
     font-size: 13px; 
     line-height: 25px; 
-    height:25px; margin-left: 
-    20px;
+    height:25px; 
+    margin-left:20px;
     cursor:pointer;
 }
 .mainLeft .Mul p{ 
@@ -87,7 +97,7 @@
     margin-right: 40px;
     position:absolute;
     top: 0px;
-    left: 700px;
+    left: 730px;
     z-index: 10;
 }
 .mainRight #right{ 
@@ -129,6 +139,7 @@
 /*图片的加载区*/
 #mainAjax{
     height:3960px;
+    position:relative;
 }
 #mainright #mainAjax ul{ 
     width:854px;
@@ -137,6 +148,7 @@
     height:auto;
     position:relative;
     border: 1px solid red;
+    margin:0 auto;
 }
 /*鼠标滑过时180度旋转*/
 #mainAjax li img:hover{
