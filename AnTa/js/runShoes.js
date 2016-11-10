@@ -198,7 +198,7 @@ $(function(){
 
             //购物车获取cookie
             $("#mainAjax ul").on("click", ".buy", function(){
-                alert("已经成功加入购物车啦");
+                //alert("已经成功加入购物车啦");
                 var id = this.id;
                 var first = $.cookie("goods") == null ? true : false;
                 var same = false;

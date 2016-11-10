@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-01 17:51:53
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-08 17:24:38
+* @Last Modified time: 2016-11-10 17:29:21
 */
 
 $(document).ready(function(){
@@ -218,69 +218,11 @@ $(document).ready(function(){
     addCar.click(function(){
         //sc_msg();
         startMove(allRight, {right:0});
-        
-        $.ajax({
-            url:'../json/runShoe.json',
-            type:'GET',
-            success:function(data){
-                var str = $.cookie('goods');
-                if(str){
-                    var arr = eval(str);
-                    var html = '';
-                    var html2 =Number();
-                    var sc_num = 0;
-                    for(var i in arr){
-                        html += '<li><div><input type="checkbox" checked = "checked" /></div><div class = "sc_pic"><img src="'+data[arr[i].id].bgUr+'" /></div><div class = "sc_title">'+data[arr[i].id].title+'</div><div class = "sc_num"><span>-</span>'+arr[i].num+'<em>+</em></div><div class = "price">'+'￥'+data[arr[i].id].price+'</div></li>';
-                        html2 += data[arr[i].id].price * arr[i].num;
-                        sc_num += arr[i].num;
-                    }
-                    $("#shopCar").find("ul").html(html);
-                    $("#money").html('￥'+html2);
-                    $("#Number").html(sc_num);
-                }
-            }
-        });
-        
-        /*
-        //创建cookie;
-        var first = $.cookie("goods") ==null ? true : false;
-        var id = $(".img_red").attr("id");
-        //alert(id)
-        var same = true;
-        if(first){
-            $.cookie("goods", '[{id:'+ id +',num:1}]', {expires:7});
-        }else{
-            var str = $.cookie("goods");
-            var arr = eval(str);
-            for(var i in arr){
-                if(arr[i].id == id){
-                    arr[i].num++;
-                    var cookieStr = JSON.stringify(arr);
-                    $.cookie("goods", cookieStr, {expires:7});
-                    same = true;
-                }
-            }
-            if(!same){
-                var obj = {id: id, num: 1};
-                arr.push(obj);
-                var cookieStr = JSON.stringify(arr);
-                $.cookie("goods", cookieStr, {expires:7});
-            }
-        }      
-        sc_msg();
-        */
     });
-    /*
-    function sc_msg(){
-        var html = '';
-        var str = $.cookie("goods");
-        var arr = eval(str);
-        for(var j in arr){
-            html += '<li><div><input type="checkbox" checked = "checked" /></div><div class = "sc_pic"><img src="../image/big_img/small'+arr[j].id+'.jpg" /></div><div class = "sc_title">女子舒适易弯折跑鞋</div><div class = "sc_num"><span>-</span>'+arr[j].num+'<em>+</em></div><div class = "price">'+'￥339.00</div></li>';
-        }
-        $("#shopCar").find("ul").html(html);
-    }
-    */
+    //购物车中商品加载；
+    smallAjax(); 
+
+        
     
 });
 window.onscroll = function(){    
@@ -359,4 +301,72 @@ function getStyle(obj,attr){
        return obj.currentStyle[attr];
     }
 }
+function smallAjax(){
+    $.ajax({
+        url:'../json/runShoe.json',
+        type:'GET',
+        success:function(data){
+            var str = $.cookie('goods');
+            if(str){
+                var arr = eval(str);
+                var html = '';
+                var html2 =Number();
+                var sc_num = 0;
+                for(var i in arr){
+                    html += '<li><div><input type="checkbox" checked = "checked" /></div><div class = "sc_pic"><img src="'+data[arr[i].id].bgUr+'" /></div><div class = "sc_title">'+data[arr[i].id].title+'</div><div class = "sc_num"><span class = "minus">-</span>'+arr[i].num+'<em class = "add">+</em></div><div class = "price">'+'￥'+data[arr[i].id].price+'</div></li>';
+                    html2 += data[arr[i].id].price * arr[i].num;
+                    sc_num += arr[i].num;
+                }
+                $("#shopCar").find("ul").html(html);
+                $("#money").html('￥'+html2);
+                $("#Number").html(sc_num);
+            }
 
+
+            var add = $("#shopCar").find("ul").find("li").find(".sc_num").find(".add");
+            //alert(add.length)
+            var minus = $("#shopCar").find("ul").find("li").find(".sc_num").find(".minus");
+            //点击“+”号，商品数量加1；
+            var str = $.cookie("goods");
+            var arr = eval(str);
+
+            for(var i = 0; i < add.length; i++){
+                add[i].index = i;
+                add[i].onclick = function(){
+
+                    arr[this.index].num++;
+                    var cookieStr = JSON.stringify(arr);
+                    $.cookie('goods', cookieStr, {expires:7});
+                    smallAjax();
+                }
+            }
+            //点击“-”号，商品数量减1；
+            for(var j = 0; j < minus.length; j++){
+                minus[j].index = j;
+                minus[j].onclick = function(){
+                    if(arr[this.index].num == 1){
+                        arr[this.index].num = 1;
+                    }else{
+                        arr[this.index].num--;
+                        var cookieStr = JSON.stringify(arr);
+                        $.cookie('goods', cookieStr, {expires:7});
+                        smallAjax();
+                    }                    
+                }
+            }         
+
+            
+        }      
+    });
+
+
+
+
+}
+
+
+
+
+
+
+                

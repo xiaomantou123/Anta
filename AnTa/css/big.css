@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-01 16:26:13
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-10 15:03:04
+* @Last Modified time: 2016-11-10 17:50:20
 */
 body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
 img{display:block;}
@@ -104,15 +104,8 @@ em{ font-style:normal;}
     margin:5px 40px 0px 0;
     background:url(../image/big_img/search.jpg) no-repeat right center white;
 }
-#bog span{
-    margin:0 25px;
-}
-#bog em{
-    float:right;
-    width:45px;
-    text-align: center;
-    font-size: 25px;
-}
+
+
 #menubg .Mcenter{
     float:left;
     background:#000;
@@ -143,7 +136,7 @@ em{ font-style:normal;}
     height:530px;   
     position:absolute;
     width:210px;
-    top:130px;
+    top:-35px;
     left:45px;
     display:none;
 }
@@ -210,7 +203,7 @@ em{ font-style:normal;}
     border: 1px solid #CFCFCF;
     position: absolute;
     left:210px;
-    top:300px;
+    top:0px;
     background:#FBFBFB;
     display:none;
     /*z-index: 999;*/
@@ -830,6 +823,7 @@ em{ font-style:normal;}
     height:20px;
     background: #ccc;
     float: left;
+    cursor:pointer;
 }
 #shopCar ul li .sc_num em{
     width:20px;
@@ -837,6 +831,7 @@ em{ font-style:normal;}
     background: #ccc;
     float: right;
     font-style: normal;
+    cursor:pointer;
 }
 #shopCar ul li .sc_num{
     width: 50px;
